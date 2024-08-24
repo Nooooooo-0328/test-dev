@@ -28,14 +28,17 @@ function updateEarthquakeData() {
 
             window.currentMarker = L.marker([coords[1], coords[0]], { icon }).addTo(window.map);
 
-            window.map.setView([coords[1], coords[0]], 4.5); 
+            window.map.setView([coords[1], coords[0]], 3.5); 
 
             document.getElementById('info').innerHTML = `
                 <h3>USGS 地震情報</h3>
-                <p><b>発生時刻:</b> ${formattedTime}</p>
+                <p><b>発生時刻(JST):</b> ${formattedTime}</p>
                 <p><b>震源:</b> ${place}</p>
                 <p><b>マグニチュード:</b> M${mag}</p>
                 <hr>
+                <h3>MAP 情報</h3>
+                Zoom Level: 3.5<br>
+                Version: 1.0.0
             `;
         })
         .catch(error => {
