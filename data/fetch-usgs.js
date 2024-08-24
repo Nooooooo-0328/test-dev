@@ -16,7 +16,7 @@ function updateEarthquakeData() {
 
             const icon = L.divIcon({
                 className: 'icon',
-                html: '<img src="data/hypocenter.png" style="width: 30px; height: 30px;" />',
+                html: '<img src="data/hypocenter.png" style="width: 50px; height: 50px;" />',
                 iconSize: [32, 32],
                 iconAnchor: [16, 32],
                 popupAnchor: [0, -32]
@@ -28,7 +28,7 @@ function updateEarthquakeData() {
 
             window.currentMarker = L.marker([coords[1], coords[0]], { icon }).addTo(window.map);
 
-            window.map.setView([coords[1], coords[0]], 3.5); 
+            window.map.setView([coords[1], coords[0]], 2.5); 
 
             document.getElementById('info').innerHTML = `
                 <h3>USGS 地震情報</h3>
